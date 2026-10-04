@@ -886,7 +886,7 @@ class ExperienceLabScene extends HTMLElement {
       for(const t of tools){const active=hovered===t.index||focused===t.index||selected===t.index,target=active?.19:0;t.lift=reduced?target:t.lift+(target-t.lift)*.16*dt;if(Math.abs(target-t.lift)>.0003)moving=true;t.group.forEach(m=>{m.offset[1]=t.lift;m.glow=m.baseGlow+(active?.06:0);});t.connector.glow=active?2.2:0;}
       if(needsFrame||moving||frames<2){
         needsFrame=false;frames++;
-        const aspect=width/height,worldW=Math.max(13.9,aspect*6.75)/(innerWidth<=760?1.08:.91);eye=[.75+camX,13.4+camY,14.6];vp=mul(ortho(worldW,worldW/aspect),view(eye,[0,.46,.18]));
+        const aspect=width/height,worldW=Math.max(13.9,aspect*6.75)/(innerWidth<=760?1.08:.91);eye=innerWidth<=760?[camX*.2,22+camY,10.5]:[.75+camX,13.4+camY,14.6];vp=mul(ortho(worldW,worldW/aspect),view(eye,[0,.46,.18]));
         gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.uniformMatrix4fv(loc.uVP,false,new Float32Array(vp));gl.uniform3fv(loc.uEye,eye);
         const activeZone=selected>=0?tools[selected].zone:focused>=0?tools[focused].zone:hovered>=0?tools[hovered].zone:-1;
         network.forEach((n,i)=>{const active=activeZone===1||activeZone===(i===0?0:2);n.edge.glow=active?1:.5;n.core.glow=active?1.65:.7;});
