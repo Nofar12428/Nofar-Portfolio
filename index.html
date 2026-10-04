@@ -397,6 +397,12 @@ html body.scroll-story-page #work .section-intro {
   html body.scroll-story-page #work .section-intro { margin: 20px 0 32px !important; }
 }
 </style>
+<style id="consistent-direction-arrows">
+html body svg.site-direction-arrow{display:inline-block!important;width:.85em!important;height:.85em!important;min-width:.85em;flex-shrink:0;vertical-align:-.08em;fill:none!important;stroke:currentColor!important;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+</style>
+<style id="consistent-pseudo-arrows">
+.principle-evidence::after,.concept-card .concept-card__arrow::before{padding-right:25px!important;background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%221.7%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M5 19 19 5M7 5h12v12%22/%3E%3C/svg%3E')!important;background-position:right 8px center!important;background-repeat:no-repeat!important;background-size:10px 10px!important}
+</style>
 </head>
   <body class="scroll-story-page">
     <noscript><style>.loader-screen{display:none!important}.reveal{opacity:1;transform:none}</style></noscript>
@@ -409,7 +415,7 @@ html body.scroll-story-page #work .section-intro {
           <div class="story-fallback-wall" aria-hidden="true"><i style="--lamp-x:13%"></i><i style="--lamp-x:33%"></i><i style="--lamp-x:53%"></i><i style="--lamp-x:73%"></i><i style="--lamp-x:93%"></i></div>
           <div class="story-vignette" aria-hidden="true"></div>
           <div class="story-cue" aria-hidden="true"><i></i><span>Scroll to explore</span></div>
-          <a class="story-skip" href="#about-new">Skip introduction ↘</a>
+          <a class="story-skip" href="#about-new">Skip introduction <svg class="site-direction-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5 19 19M7 19h12V7"/></svg></a>
           <div class="story-handoff" aria-hidden="true"></div>
           <article class="story-panel" data-scene="0"><div class="story-panel-inner"><p class="story-kicker">Learning technologies · UX/UI · Interactive development</p><h1>Designing experiences that people remember.</h1><p>I design meaningful learning experiences and interactive digital products at the intersection of instructional thinking, user experience and technology.</p></div></article>
           <article class="story-panel" data-scene="1"><div class="story-panel-inner"><p class="story-kicker">A little about me</p><h2>I turn complexity into clear, engaging experiences.</h2><p>My work brings together learning design, UX thinking and interactive development—shaping ideas into experiences that feel intuitive, purposeful and human.</p></div></article>
@@ -432,7 +438,7 @@ html body.scroll-story-page #work .section-intro {
             experience and technology.
           </p>
           <div class="hero-actions">
-            <a class="button dark" href="#work">View selected work <span>↓</span></a><a class="text-link" href="#about">More about me ↗</a>
+            <a class="button dark" href="#work">View selected work <span>↓</span></a><a class="text-link" href="#about">More about me <svg class="site-direction-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19 19 5M7 5h12v12"/></svg></a>
           </div>
         </div>
         <div class="hero-visual reveal">
@@ -455,7 +461,7 @@ html body.scroll-story-page #work .section-intro {
             <i aria-hidden="true"></i>
             <h2>Selected <em>work</em></h2>
           </div>
-          <a href="#work">ALL PROJECTS <span class="all-projects-arrow" aria-hidden="true">↘</span></a>
+          <a href="#work">ALL PROJECTS <span class="all-projects-arrow" aria-hidden="true"><svg class="site-direction-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5 19 19M7 19h12V7"/></svg></span></a>
         </div>
         <p class="section-intro">
           A selection of projects across learning design, UX/UI, interactive
@@ -463,12 +469,12 @@ html body.scroll-story-page #work .section-intro {
           study.
         </p>
         <div class="project-list-new">
-          <a class="project-row" style="--row-accent:#5b8cff" href="projects/stratasys-case-study.html"><span class="project-number">01</span><h3>Stratasys Feedback Copilot</h3><p>An on-demand Copilot that helps managers prepare for feedback conversations.</p><span class="project-arrow">↗</span></a>
-          <a class="project-row" style="--row-accent:#7a4cff" href="projects/lumina-case-study.html"><span class="project-number">02</span><h3>Lumina Cast</h3><p>A mobile control app that makes portable projector setup simple and cinematic.</p><span class="project-arrow">↗</span></a>
-          <a class="project-row" style="--row-accent:#e13d91" href="projects/hashtag-case-study.html"><span class="project-number">03</span><h3>Hashtag#</h3><p>A marketing platform that explains influencer services and guides visitors toward the right offer.</p><span class="project-arrow">↗</span></a>
-          <a class="project-row" style="--row-accent:#e76d32" href="projects/alcohol-case-study.html"><span class="project-number">04</span><h3>Alcohol Driving Simulation</h3><p>An immersive Unity simulation that demonstrates the impact of alcohol on driving decisions.</p><span class="project-arrow">↗</span></a>
-          <a class="project-row" style="--row-accent:#1858a5" href="projects/spaceship-case-study.html"><span class="project-number">05</span><h3>Journey to the Spaceship</h3><p>A learning game that transforms matching questions into an exploratory space mission.</p><span class="project-arrow">↗</span></a>
-          <a class="project-row" style="--row-accent:#d09b00" href="projects/generator-case-study.html"><span class="project-number">06</span><h3>Spaceship Generator Tool</h3><p>A Unity editor tool for creating and managing game content efficiently.</p><span class="project-arrow">↗</span></a>
+          <a class="project-row" style="--row-accent:#5b8cff" href="projects/stratasys-case-study.html"><span class="project-number">01</span><h3>Stratasys Feedback Copilot</h3><p>An on-demand Copilot that helps managers prepare for feedback conversations.</p><span class="project-arrow"><svg class="site-direction-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19 19 5M7 5h12v12"/></svg></span></a>
+          <a class="project-row" style="--row-accent:#7a4cff" href="projects/lumina-case-study.html"><span class="project-number">02</span><h3>Lumina Cast</h3><p>A mobile control app that makes portable projector setup simple and cinematic.</p><span class="project-arrow"><svg class="site-direction-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19 19 5M7 5h12v12"/></svg></span></a>
+          <a class="project-row" style="--row-accent:#e13d91" href="projects/hashtag-case-study.html"><span class="project-number">03</span><h3>Hashtag#</h3><p>A marketing platform that explains influencer services and guides visitors toward the right offer.</p><span class="project-arrow"><svg class="site-direction-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19 19 5M7 5h12v12"/></svg></span></a>
+          <a class="project-row" style="--row-accent:#e76d32" href="projects/alcohol-case-study.html"><span class="project-number">04</span><h3>Alcohol Driving Simulation</h3><p>An immersive Unity simulation that demonstrates the impact of alcohol on driving decisions.</p><span class="project-arrow"><svg class="site-direction-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19 19 5M7 5h12v12"/></svg></span></a>
+          <a class="project-row" style="--row-accent:#1858a5" href="projects/spaceship-case-study.html"><span class="project-number">05</span><h3>Journey to the Spaceship</h3><p>A learning game that transforms matching questions into an exploratory space mission.</p><span class="project-arrow"><svg class="site-direction-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19 19 5M7 5h12v12"/></svg></span></a>
+          <a class="project-row" style="--row-accent:#d09b00" href="projects/generator-case-study.html"><span class="project-number">06</span><h3>Spaceship Generator Tool</h3><p>A Unity editor tool for creating and managing game content efficiently.</p><span class="project-arrow"><svg class="site-direction-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19 19 5M7 5h12v12"/></svg></span></a>
         </div>
         <div class="projects-grid">
           <a class="project-card project-large" style="--accent: #e2a07d; --accent2: #743f30" href="projects/stratasys-case-study.html">
@@ -477,7 +483,7 @@ html body.scroll-story-page #work .section-intro {
             </div>
             <div class="card-glow"></div>
             <div class="card-content">
-              <div class="card-top"><span>01</span><b>↗</b></div>
+              <div class="card-top"><span>01</span><b><svg class="site-direction-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19 19 5M7 5h12v12"/></svg></b></div>
               <div>
                 <p>LEARNING EXPERIENCE · AI PRODUCT</p>
                 <h3>Stratasys<br>Feedback Copilot</h3>
@@ -492,7 +498,7 @@ html body.scroll-story-page #work .section-intro {
             </div>
             <div class="card-glow"></div>
             <div class="card-content">
-              <div class="card-top"><span>02</span><b>↗</b></div>
+              <div class="card-top"><span>02</span><b><svg class="site-direction-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19 19 5M7 5h12v12"/></svg></b></div>
               <div>
                 <p>UX/UI · MOBILE PRODUCT</p>
                 <h3>Lumina<br>Cast</h3>
@@ -505,7 +511,7 @@ html body.scroll-story-page #work .section-intro {
               <img src="assets/images/14048bd58d57c5355d15e6c3.jpg" alt="Hashtag platform on laptop and mobile">
             </div>
             <div class="card-content">
-              <div class="card-top"><span>03</span><b>↗</b></div>
+              <div class="card-top"><span>03</span><b><svg class="site-direction-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19 19 5M7 5h12v12"/></svg></b></div>
               <div>
                 <p>UX/UI · MARKETING PLATFORM</p>
                 <h3>Hashtag#</h3>
@@ -517,7 +523,7 @@ html body.scroll-story-page #work .section-intro {
               <img src="assets/images/47a195924c7121e054f7289e.webp" alt="Alcohol Driving 3D simulation and keyboard controls">
             </div>
             <div class="card-content">
-              <div class="card-top"><span>04</span><b>↗</b></div>
+              <div class="card-top"><span>04</span><b><svg class="site-direction-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19 19 5M7 5h12v12"/></svg></b></div>
               <div>
                 <p>DRIVING SIMULATION</p>
                 <h3>Alcohol<br>Driving</h3>
@@ -530,7 +536,7 @@ html body.scroll-story-page #work .section-intro {
               <img src="assets/images/2e774c2bd7ae9b496ddcf474.webp" alt="Journey to the Spaceship game on desktop and laptop">
             </div>
             <div class="card-content">
-              <div class="card-top"><span>05</span><b>↗</b></div>
+              <div class="card-top"><span>05</span><b><svg class="site-direction-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19 19 5M7 5h12v12"/></svg></b></div>
               <div>
                 <p>GAME DESIGN</p>
                 <h3>Journey to<br>the Spaceship</h3>
@@ -543,7 +549,7 @@ html body.scroll-story-page #work .section-intro {
               <img src="assets/images/a94babfcd4e843a0cb9545d3.webp" alt="Spaceship game generator on desktop and laptop">
             </div>
             <div class="card-content">
-              <div class="card-top"><span>06</span><b>↗</b></div>
+              <div class="card-top"><span>06</span><b><svg class="site-direction-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19 19 5M7 5h12v12"/></svg></b></div>
               <div>
                 <p>UNITY TOOL</p>
                 <h3>Spaceship<br>Generator</h3>
@@ -613,7 +619,7 @@ html body.scroll-story-page #work .section-intro {
               need, shaping the experience, designing the interface and building
               the interaction.
             </p>
-            <a class="button light-btn" href="contact.html">Let's connect ↗</a>
+            <a class="button light-btn" href="contact.html">Let's connect <svg class="site-direction-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19 19 5M7 5h12v12"/></svg></a>
           </div>
           <div class="expertise">
             <h4>EXPERTISE</h4>
