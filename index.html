@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="cinema-static">
   <head>
+<meta name="portfolio-build" content="2026-10-06-r25">
     <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Nofar Ganon — Learning Experience Designer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -407,6 +408,11 @@ html body svg.site-direction-arrow{display:inline-block!important;width:.85em!im
 @media(max-width:760px){html body .landing-tools>.experience-lab-component-wrap{height:360px!important}html body .experience-lab-component-wrap experience-lab-scene{height:360px!important;--experience-lab-height:360px!important}.landing-tools{margin-bottom:7vh!important}}
 </style>
 <style>@media(max-width:760px){html body .landing-tools>.experience-lab-component-wrap.model-fallback,html body .model-fallback experience-lab-scene{height:600px!important;--experience-lab-height:600px!important}}</style>
+<style id="oct6-landing-proportions">
+html body .story-panel{--story-heading-size:clamp(32px,3.1vw,56px)}html body .story-panel h1,html body .story-panel h2{font-size:var(--story-heading-size)!important;line-height:1.12!important}html body .story-panel p:not(.story-kicker){font-size:calc(var(--story-heading-size)*.45)!important;line-height:1.6!important;max-width:580px!important}
+@media(min-width:761px){html body.scroll-story-page .site-nav{width:min(920px,calc(100% - 48px))!important;padding:10px!important}html body.scroll-story-page .site-nav nav a{font-size:16px!important;padding:14px 20px!important}html body.scroll-story-page .site-nav nav .nav-contact{padding:14px 24px!important}html body .story-cue{font-size:13px!important;letter-spacing:1.6px!important}html body .story-skip{font-size:15px!important}html body footer .footer-top .button.light-btn{font-size:17px!important;padding:19px 28px!important;gap:15px!important}}
+@media(max-width:760px){html body .story-panel{--story-heading-size:clamp(32px,8vw,42px)}}
+</style>
 </head>
   <body class="scroll-story-page">
     <noscript><style>.loader-screen{display:none!important}.reveal{opacity:1;transform:none}</style></noscript>
@@ -463,7 +469,7 @@ html body svg.site-direction-arrow{display:inline-block!important;width:.85em!im
           <div class="section-heading-group">
             <span>01</span>
             <i aria-hidden="true"></i>
-            <h2>Selected <em>work</em></h2>
+            <h2>Selected <em>works</em></h2>
           </div>
           <a href="#work">ALL PROJECTS <span class="all-projects-arrow" aria-hidden="true"><svg class="site-direction-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5 19 19M7 19h12V7"/></svg></span></a>
         </div>
@@ -886,7 +892,7 @@ class ExperienceLabScene extends HTMLElement {
       for(const t of tools){const active=hovered===t.index||focused===t.index||selected===t.index,target=active?.19:0;t.lift=reduced?target:t.lift+(target-t.lift)*.16*dt;if(Math.abs(target-t.lift)>.0003)moving=true;t.group.forEach(m=>{m.offset[1]=t.lift;m.glow=m.baseGlow+(active?.06:0);});t.connector.glow=active?2.2:0;}
       if(needsFrame||moving||frames<2){
         needsFrame=false;frames++;
-        const aspect=width/height,worldW=Math.max(13.9,aspect*6.75)/(innerWidth<=760?1.08:.91);eye=innerWidth<=760?[camX*.2,22+camY,10.5]:[.75+camX,13.4+camY,14.6];vp=mul(ortho(worldW,worldW/aspect),view(eye,[0,.46,.18]));
+        const aspect=width/height,worldW=Math.max(13.9/(innerWidth<=760?1.08:1.04),aspect*7.8);eye=innerWidth<=760?[camX*.2,22+camY,10.5]:[camX*.35,22+camY,10.5];vp=mul(ortho(worldW,worldW/aspect),view(eye,[0,.46,.18]));vp[13]-=innerWidth<=760?.10:.06;
         gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.uniformMatrix4fv(loc.uVP,false,new Float32Array(vp));gl.uniform3fv(loc.uEye,eye);
         const activeZone=selected>=0?tools[selected].zone:focused>=0?tools[focused].zone:hovered>=0?tools[hovered].zone:-1;
         network.forEach((n,i)=>{const active=activeZone===1||activeZone===(i===0?0:2);n.edge.glow=active?1:.5;n.core.glow=active?1.65:.7;});
